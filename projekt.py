@@ -70,7 +70,6 @@ screenXO(dane)
 tura = 1
 while True:
     screenXO(dane)
-    #print(dane)
     if tura == 1:
         printGreen("Twoj ruch\n")
         x = int(input("Podaj wsp x: "))
@@ -88,3 +87,71 @@ while True:
        else:
             dane[x][y] = tura
             tura *= -1
+    if (dane[0][0] == 1 and dane[1][0] == 1 and dane[2][0] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[1][0] == 1 and dane[1][1] == 1 and dane[1][2] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[2][0] == 1 and dane[2][1] == 1 and dane[2][2] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[0][2] == 1 and dane[1][1] == 1 and dane[2][0] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[0][0] == 1 and dane[1][1] == 1 and dane[2][2] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[0][1] == 1 and dane[1][1] == 1 and dane[2][1] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[0][2] == 1 and dane[1][2] == 1 and dane[2][2] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[0][0] == 1 and dane[0][1] == 1 and dane[0][2] == 1):
+        screenXO(dane)
+        print("Wygrales")
+        break
+    elif(dane[0][0] == -1 and dane[1][0] == -1 and dane[2][0] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[1][0] == -1 and dane[1][1] == -1 and dane[1][2] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[2][0] == -1 and dane[2][1] == -1 and dane[2][2] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[0][2] == -1 and dane[1][1] == -1 and dane[2][0] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[0][0] == -1 and dane[1][1] == -1 and dane[2][2] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[0][1] == -1 and dane[1][1] == -1 and dane[2][1] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[0][2] == -1 and dane[1][2] == -1 and dane[2][2] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif(dane[0][0] == -1 and dane[0][1] == -1 and dane[0][2] == -1):
+        screenXO(dane)
+        print("Przegrales")
+        break
+    elif all(dane[i][j] != 0 for i in range(rozmiar) for j in range(rozmiar)):
+        screenXO(dane)
+        print("Remis")
+        break

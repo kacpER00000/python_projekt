@@ -88,13 +88,16 @@ while True:
     screenXO(dane)
     if tura == 1:
         printGreen("Twoj ruch\n")
-        x = int(input("Podaj wsp x: "))
-        y = int(input("Podaj wsp y: "))
-        if dane[x][y] != 0:
-            print("Nie możesz zająć pola przeciwnikowi\n")
-        else:
-            dane[x][y] = tura
-            tura *= -1
+        try:
+            x = int(input("Podaj wsp x: "))
+            y = int(input("Podaj wsp y: "))
+            if dane[x][y] != 0:
+                print()
+            else:
+                dane[x][y] = tura
+                tura *= -1
+        except:
+            pass
     else:
        x = randint(0,2)
        y = randint(0,2)

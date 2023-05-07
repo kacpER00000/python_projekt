@@ -62,9 +62,9 @@ def screenXO(screen):
         printWhite(lines["vertical"])
         for j in row:
             if j > 0:
-                printGreen(" X ")
+                printGreen(znak1)
             elif j < 0:
-                printRed(" O ")
+                printRed(znak2)
             else:
                 printWhite("   ")
             printWhite(lines["vertical"])

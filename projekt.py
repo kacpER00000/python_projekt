@@ -12,6 +12,22 @@ def printRed(data):
 def printGreen(data):
     print(Fore.GREEN, data, end="", sep="")
 
+os.system('cls')
+znak_gracza =""
+znak_bota =""
+while True:
+    znak_gracza = input("Podaj X lub O: ")
+    if znak_gracza == "X" or znak_gracza == "O":
+        break
+    else:
+        print("Niepoprawny znak! Podaj X lub O.")
+
+if znak_gracza == "X":
+    znak_bota = "O"
+else:
+    znak_bota = "X"
+znak1 = " "+znak_gracza+" "
+znak2 = " "+znak_bota+" "
 
 def screenXO(screen):
     os.system('cls')
